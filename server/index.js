@@ -31,3 +31,4 @@ mongoose.connection.once("open", () => {
     app.listen(process.env.PORT, console.log("server running..."))
 })
 
+module.exports = app

@@ -1,10 +1,11 @@
+import { APP_URL } from "@/constants/config"
 import { User } from "@/types/User"
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 
 export const authApi = createApi({
     reducerPath: "authApi",
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://localhost:5000/api/auth",
+        baseUrl: `${APP_URL}/api/auth`,
         credentials: "include"
     }),
     tagTypes: [],

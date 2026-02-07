@@ -1,10 +1,11 @@
+import { APP_URL } from "@/constants/config"
 import { Todo } from "@/types/Todo"
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 
 export const todoApi = createApi({
     reducerPath: "todoApi",
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://localhost:5000/api/todo",
+        baseUrl: `${APP_URL}/api/todo`,
         credentials: "include" // very imp for cookies to work
     }),
     tagTypes: ["todo"],
